@@ -1,0 +1,9 @@
+By making it difficult for fake emails to be sent from your organisation's domains.
+
+This will be achieved by configuring effective anti-spoofing controls on your domains. In summary:
+
+• Sender Policy Framework (SPF) allows you to publish IP addresses which should be trusted for your domain.
+
+• Domain Keys Identified Mail (DKIM) allows you to cryptographically sign email you send to show it’s from your domain. Although DKIM is not as widely supported as SPF, it has the advantage of being able to support forwarded email.
+
+• Domain-based Message Authentication, Reporting and Conformance (DMARC) allows you to set a policy for how receiving email servers should handle email which doesn’t pass either SPF or DKIM checks. This includes untrusted emails, which should be discarded. DMARC also generates reports, which you can use to understand how 
