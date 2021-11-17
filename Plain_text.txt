@@ -1,0 +1,1 @@
+X.509 certificates should have a sensible X.500 name.  PGP certificates should have sensible identi-fiers of your owner and include at least an e-mail address and a small photograph of them.  Studentsshould exercise due diligence in key parties when signing each other’s PGP certificates.
