@@ -1,6 +1,6 @@
 # Takes in list of public key sig files and a document and checks whether document is signed by signatories
 import sys
-from pgpy import PGPKey, PGPSignature, PGPMessage
+from pgpy import PGPKey, PGPSignature
 
 #signatures_files_list = sys.argv[1]
 signatures_files_list = 'app_files/signatures_list' # Hardcoded for testing
@@ -27,13 +27,13 @@ with open(signatures_files_list, "r") as signatures_files:
         signatures.append(signature)
 
 # Get document
-plain_text = PGPMessage.from_file(plaintext_file)
+with open(plaintext_file, "r") as plainfile:
+    plain_text = plainfile.read()
 
 # verify
 for i in range(len(publickeys)):
     verifications = publickeys[i].verify(plain_text, signature=signatures[i])
-    for signature in verifications.good_signatures:
-        if signature.verified:
-            print("Verified")
-            continue
-        print("Not Verified!")
+    if verifications:
+        print(f"Public key id: {publickeys[i].fingerprint.keyid} Verified")
+    else: print(f"Public key id: {publickeys[i].fingerprint.keyid} Not Verified!")
+print('Finished')
