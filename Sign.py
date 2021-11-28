@@ -13,10 +13,14 @@ privkey = PGPKey()
 privkey.parse(pkdata)
 
 # sign the file
-message = PGPMessage.new(plaintext, file=True)
+with open(plaintext, "r") as plainfile:
+    plain_text = plainfile.read()
+message = PGPMessage.new(plain_text)
+print(message)
+
 #with privkey.unlock(priv_passphrase):
 signature = privkey.sign(message)
-
+print(signature)
 # write the signature
-with open(plaintext+'.sig', "w") as sigfile:
+with open( plaintext[:-3] + privatekey_file[-16:]  +'.sig', "w+") as sigfile:
     sigfile.write(str(signature))

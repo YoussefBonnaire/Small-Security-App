@@ -1,6 +1,6 @@
 # Takes in list of public key sig files and a document and checks whether document is signed by signatories
 import sys
-from pgpy import PGPKey, PGPSignature
+from pgpy import PGPKey, PGPSignature, PGPMessage
 
 #signatures_files_list = sys.argv[1]
 signatures_files_list = 'app_files/signatures_list' # Hardcoded for testing
