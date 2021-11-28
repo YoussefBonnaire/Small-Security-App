@@ -1,27 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="67c22a5a-539e-4c0f-8dcb-afecd94e3afb" name="Changes" comment="Test files">
-      <change afterPath="$PROJECT_DIR$/Plain_text_J&amp;Y.tCA.key.sig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Sign_x509.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sig_files/Plain_text2_J&amp;Y.signed" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sig_files/Plain_text_J&amp;Y.Test1_SECRET.asc.sig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sig_files/Plain_text_J&amp;Y.Test2_SECRET.asc.sig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sig_files/Plain_text_J&amp;Y.signed" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sig_files/Plain_text_J&amp;Y.tCA.key.sig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sig_files/Plain_text_J&amp;Y.txt.sha256" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sig_files/Plain_text_J&amp;Y.txt.sig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sig_files/Test_file.Test3_SECRET.asc.sig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sig_files/Test_file.tCA.key.sig" afterDir="false" />
+    <list default="true" id="67c22a5a-539e-4c0f-8dcb-afecd94e3afb" name="Changes" comment="added Test files and work on x509 record">
+      <change afterPath="$PROJECT_DIR$/Self-signedCA.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sig_files/Plain_text_J&amp;Y.ot-.key.sig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sig_files/Plain_text_J&amp;Y.sef.key.sig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test_root-.csr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/x509_cert/test_root-.crt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/x509_keys/test_root-.key" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DMML/Project/datasets/Coursework/.idea/Coursework.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DMML/Project/datasets/Coursework/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DMML/Project/datasets/Coursework/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../DMML/Project/datasets/Coursework/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Gits.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Gits.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plain_text2_J&amp;Y.signed" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plain_text_J&amp;Y.Test1_SECRET.asc.sig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plain_text_J&amp;Y.Test2_SECRET.asc.sig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plain_text_J&amp;Y.signed" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Plain_text_J&amp;Y.txt.sig" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Record.py" beforeDir="false" afterPath="$PROJECT_DIR$/Record.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sign.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sign_pgp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test_file.Test3_SECRET.asc.sig" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app_files/publickey_list" beforeDir="false" afterPath="$PROJECT_DIR$/app_files/publickey_list" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app_files/signatures_list" beforeDir="false" afterPath="$PROJECT_DIR$/app_files/signatures_list" afterDir="false" />
     </list>
@@ -38,7 +33,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../DMML/Project/datasets/Coursework" />
   </component>
   <component name="ProjectId" id="21Q1j6hafavmidWPa416FcVG6i5" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -55,14 +50,17 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../DMML/Project/datasets/Coursework" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\youss\OneDrive\Documents\Education\CNS\CW2\Gits\sig_files" />
+      <recent name="C:\Users\youss\OneDrive\Documents\Education\CNS\CW2\Gits\x509_keys" />
+      <recent name="C:\Users\youss\OneDrive\Documents\Education\CNS\CW2\Gits\x509_cert" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Sign_x509">
+  <component name="RunManager" selected="Python.Record">
     <configuration name="Record" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Gits" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -77,6 +75,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Record.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Self-signedCA" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Gits" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Self-signedCA.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -121,7 +141,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Sign_x509.py" />
-      <option name="PARAMETERS" value="Plain_text_J&amp;Y.txt x509_keys/rootCA.key JAYO" />
+      <option name="PARAMETERS" value="Plain_text_J&amp;Y.txt x509_keys/privateKey_x509_youssef.key Private123" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -133,10 +153,12 @@
       <item itemvalue="Python.Sign_x509" />
       <item itemvalue="Python.Record" />
       <item itemvalue="Python.Sign_pgp" />
+      <item itemvalue="Python.Self-signedCA" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.Record" />
+        <item itemvalue="Python.Self-signedCA" />
         <item itemvalue="Python.Sign_pgp" />
       </list>
     </recent_temporary>
@@ -149,7 +171,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1637858633104</updated>
-      <workItem from="1637858636407" duration="15244000" />
+      <workItem from="1637858636407" duration="17848000" />
+      <workItem from="1638140949654" duration="360000" />
     </task>
     <task id="LOCAL-00001" summary="Update on record file">
       <created>1637862252241</created>
@@ -172,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638106549351</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="added Test files and work on x509 record">
+      <created>1638122652284</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1638122652284</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,13 +218,15 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Update on record file" />
     <MESSAGE value="Finished record.py functionality" />
     <MESSAGE value="Test files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test files" />
+    <MESSAGE value="added Test files and work on x509 record" />
+    <option name="LAST_COMMIT_MESSAGE" value="added Test files and work on x509 record" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -214,22 +246,13 @@
           <line>3064</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Record.py</url>
-          <line>38</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/Sign_x509.py</url>
-          <line>22</line>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Gits$Sign.coverage" NAME="Sign Coverage Results" MODIFIED="1638106231964" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Gits$Sign_x509.coverage" NAME="Sign_x509 Coverage Results" MODIFIED="1638122270363" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Gits$Record.coverage" NAME="Record Coverage Results" MODIFIED="1638122125320" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Gits$Sign_x509.coverage" NAME="Sign_x509 Coverage Results" MODIFIED="1638124294566" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Gits$Self_signedCA.coverage" NAME="Self-signedCA Coverage Results" MODIFIED="1638123905724" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Gits$Record.coverage" NAME="Record Coverage Results" MODIFIED="1638124341155" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

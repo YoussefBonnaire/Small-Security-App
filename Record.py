@@ -47,7 +47,7 @@ for i in range(len(publickeys)):
     try:
         verifications = publickeys[i].verify(plain_text, signature=signatures[i])
     except:
-        verifications = verify(publickeys[i], signatures[i], plain_text, 'sha256')
+        verifications = verify(publickeys[i], signatures[i], plain_text, "sha256")
 
     if verifications:
         print(f"Public key id: {publickeys[i].fingerprint.keyid} Verified")
