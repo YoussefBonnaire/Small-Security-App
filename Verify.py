@@ -1,11 +1,14 @@
 import sys
 
-from pgpy import PGPKey, PGPMessage, PGPSignature, errors
+from OpenSSL import crypto
+from OpenSSL.crypto import verify
+from pgpy import PGPKey, PGPSignature
 from cryptography import x509
 
 signatureListFiles = 'app_files/signatures_list'
 certificate_files_list = 'app_files/certificate_list'
 plaintext_file = 'Plain_text_J&Y.txt'
+
 #Read in signatures and certificates
 signatureList = []
 with open(signatureListFiles,"r") as sigFiles:
@@ -32,8 +35,10 @@ with open(certificate_files_list, "r") as certificate_files:
                 cert = certificate.read()
                 crtObj = x509.load_pem_x509_certificate(cert)
                 certificates.append(crtObj)
+
 with open(plaintext_file, "rb") as plainfile:
     plain_text = plainfile.read()
+
 # verify
 for i in range(len(signatureList)):
     if isinstance(certificates[i], PGPKey):
@@ -43,7 +48,8 @@ for i in range(len(signatureList)):
         else:
             print('Not PGP Verified')
     else:
-        if certificates[i].fingerprint(certificates[i].signature_hash_algorithm) == signatureList[i].signer_fingerprint:
-            print('X509 verified')
-        else:
-            print('Not X509 verified')
+        #if certificates[i].fingerprint(certificates[i].signature_hash_algorithm) == signatureList[i].signer_fingerprint:
+        try:
+            if verify(certificates[i], signatureList[i], plain_text, "sha256") is None:
+                print('X509 verified')
+        except crypto.Error:print('Not X509 verified, either wrong signature or text')

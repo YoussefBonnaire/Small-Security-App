@@ -4,14 +4,14 @@ import pgpy
 from pgpy import PGPKey, PGPSignature
 from OpenSSL.crypto import FILETYPE_PEM, verify, X509, load_certificate
 
-signatures_files_list = sys.argv[1]
-#signatures_files_list = 'app_files/signatures_list'  # Hardcoded for testing
+#signatures_files_list = sys.argv[1]
+signatures_files_list = 'app_files/signatures_list'  # Hardcoded for testing
 
-certificate_files_list = sys.argv[2]
-#certificate_files_list = 'app_files/certificate_list'  # Hardcoded for testing
+#certificate_files_list = sys.argv[2]
+certificate_files_list = 'app_files/certificate_list'  # Hardcoded for testing
 
-plaintext_file = sys.argv[3]
-#plaintext_file = 'Plain_text_J&Y.txt'  # Hardcoded for testing
+#plaintext_file = sys.argv[3]
+plaintext_file = 'Plain_text_J&Y.txt'  # Hardcoded for testing
 
 # get key
 certificates = []
