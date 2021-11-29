@@ -1,16 +1,17 @@
 # Takes in list of public key sig files and a document and checks whether document is signed by signatories
+import sys
 import pgpy
 from pgpy import PGPKey, PGPSignature
 from OpenSSL.crypto import FILETYPE_PEM, verify, X509, load_certificate
 
-# signatures_files_list = sys.argv[1]
-signatures_files_list = 'app_files/signatures_list'  # Hardcoded for testing
+signatures_files_list = sys.argv[1]
+#signatures_files_list = 'app_files/signatures_list'  # Hardcoded for testing
 
-# certificate_files_list = sys.argv[2]
-certificate_files_list = 'app_files/certificate_list'  # Hardcoded for testing
+certificate_files_list = sys.argv[2]
+#certificate_files_list = 'app_files/certificate_list'  # Hardcoded for testing
 
-# plaintext_file = sys.argv[3]
-plaintext_file = 'Plain_text_J&Y.txt'  # Hardcoded for testing
+plaintext_file = sys.argv[3]
+#plaintext_file = 'Plain_text_J&Y.txt'  # Hardcoded for testing
 
 # get key
 certificates = []
@@ -39,7 +40,7 @@ with open(signatures_files_list, "r") as signatures_files:
                 signatures.append(signature)
 
 if len(signatures) != len(certificates):
-    raise ValueError('Number of public keys and signature not equal')
+    raise ValueError('Number of certificates and signatures are not equal')
 
 # Get document
 with open(plaintext_file, "r") as plainfile:
