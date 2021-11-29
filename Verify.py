@@ -17,7 +17,7 @@ x509CertList = []
 with open(x509CertListFiles,"r") as x509CertFiles:
     files = x509CertFiles.read().splitlines()
     for file in files:
-        certificate = x509.load_der_x509_certificate(file)
+        certificate = x509.load_pem_x509_certificate(file)
         x509CertList.append(certificate)
 
 pgpCertList = []
