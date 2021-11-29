@@ -1,7 +1,7 @@
 # Takes in list of public key sig files and a document and checks whether document is signed by signatories
 import pgpy
 from pgpy import PGPKey, PGPSignature
-from OpenSSL.crypto import load_publickey, FILETYPE_PEM, verify, X509, load_certificate,dump_publickey
+from OpenSSL.crypto import FILETYPE_PEM, verify, X509, load_certificate
 
 # signatures_files_list = sys.argv[1]
 signatures_files_list = 'app_files/signatures_list'  # Hardcoded for testing
@@ -25,7 +25,6 @@ with open(certificate_files_list, "r") as certificate_files:
                 cert = certificate.read()
                 crtObj = load_certificate(FILETYPE_PEM, cert)
                 certificates.append(crtObj)
-
 
 signatures = []
 with open(signatures_files_list, "r") as signatures_files:
