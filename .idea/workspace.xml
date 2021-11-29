@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="67c22a5a-539e-4c0f-8dcb-afecd94e3afb" name="Changes" comment="Small changes to Record.py">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="67c22a5a-539e-4c0f-8dcb-afecd94e3afb" name="Changes" comment="Fixed reading in 509 certificate">
       <change beforePath="$PROJECT_DIR$/Verify.py" beforeDir="false" afterPath="$PROJECT_DIR$/Verify.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -157,10 +156,10 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.Record" />
-      <item itemvalue="Python.Self-signedCA" />
-      <item itemvalue="Python.Sign_pgp" />
       <item itemvalue="Python.Sign_x509" />
+      <item itemvalue="Python.Record" />
+      <item itemvalue="Python.Sign_pgp" />
+      <item itemvalue="Python.Self-signedCA" />
       <item itemvalue="Python.Verify" />
     </list>
     <recent_temporary>
@@ -182,7 +181,7 @@
       <updated>1637858633104</updated>
       <workItem from="1637858636407" duration="17848000" />
       <workItem from="1638140949654" duration="741000" />
-      <workItem from="1638185561384" duration="12035000" />
+      <workItem from="1638185561384" duration="12338000" />
     </task>
     <task id="LOCAL-00001" summary="Update on record file">
       <created>1637862252241</created>
@@ -261,7 +260,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638204254697</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Fixed reading in 509 certificate">
+      <created>1638206016649</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1638206016649</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,7 +295,8 @@
     <MESSAGE value="Functioning Record.py" />
     <MESSAGE value="Small changes" />
     <MESSAGE value="Small changes to Record.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="Small changes to Record.py" />
+    <MESSAGE value="Fixed reading in 509 certificate" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed reading in 509 certificate" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
