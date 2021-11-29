@@ -3,3 +3,5 @@ pgp_keys/Test1_public.asc
 pgp_keys/Test2_public.asc
 pgp_keys/Test3_public.asc
 x509_cert/Certificate_x509_youssef_CA.crt
+x509_cert/certificate_x509_jamie_CA.crt
+x509_cert/certificate_x509_jamie_CA.crt

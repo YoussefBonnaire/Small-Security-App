@@ -20,7 +20,7 @@ with open(public_key_files_list, "r") as publickey_files:
             key, _ = PGPKey.from_file(publickey_file)
             publickeys.append(key)
         except:
-            with open(publickey_file, "r") as certificate:
+            with open(publickey_file, "rb") as certificate:
                 cert = certificate.read()
                 crtObj = load_certificate(FILETYPE_PEM, cert)
                 publickeys.append(crtObj)
@@ -46,11 +46,20 @@ with open(plaintext_file, "r") as plainfile:
 for i in range(len(publickeys)):
     try:
         verifications = publickeys[i].verify(plain_text, signature=signatures[i])
+        with open(public_key_files_list, "r") as publickey_files:
+            lines = publickey_files.read().splitlines()
+            if verifications:
+                print(f"Public key id: {lines[i]} Verified")
+            else:
+                print(f"Public key id: {lines[i]} not Verified!")
     except:
-        verifications = verify(publickeys[i], signatures[i], plain_text, "sha256")
+        with open(plaintext_file, "rb") as plainfile:
+            plain_text = plainfile.read()
+        try:
+            verifications = verify(publickeys[i], signatures[i], plain_text, "sha256")
+            if verifications is None:
+                print(f"Public key id: {lines[i]} Verified")
+        except:
+            print(f"Public key id: {lines[i]} not Verified")
 
-    if verifications:
-        print(f"Public key id: {publickeys[i].fingerprint.keyid} Verified")
-    else:
-        print(f"Public key id: {publickeys[i].fingerprint.keyid} Not Verified!")
 print('Finished')

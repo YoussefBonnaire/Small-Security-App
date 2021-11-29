@@ -82,8 +82,21 @@ def generatecsr():
         cert.gmtime_adj_notAfter(315360000)
         cert.set_issuer(cert.get_subject())
         cert.set_pubkey(key)
-        cert.sign(key, b"sha256")
 
+        cert.add_extensions([
+            crypto.X509Extension(b"subjectKeyIdentifier", False, b"hash", subject=cert),
+        ])
+
+        cert.add_extensions([
+            crypto.X509Extension(b"authorityKeyIdentifier", False, b"keyid:always,issuer", issuer=cert),
+        ])
+
+        cert.add_extensions([
+            crypto.X509Extension(b"basicConstraints", True, b"CA:TRUE"),
+            crypto.X509Extension(b"keyUsage", True, b"digitalSignature, keyCertSign, cRLSign"),
+        ])
+
+        cert.sign(key, b"sha256")
         if os.path.exists(crtpath):
             print ("Certificate File Exists, aborting.")
             print (crtpath)
