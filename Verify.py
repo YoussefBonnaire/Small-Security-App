@@ -52,4 +52,4 @@ for i in range(len(signatureList)):
         try:
             if verify(certificates[i], signatureList[i], plain_text, "sha256") is None:
                 print('X509 verified')
-        except crypto.Error:print('Not X509 verified, either wrong signature or text')
+        except crypto.Error:print('Not X509 verified, wrong signature')
