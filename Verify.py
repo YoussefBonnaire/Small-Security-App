@@ -5,9 +5,12 @@ from OpenSSL.crypto import verify
 from pgpy import PGPKey, PGPSignature
 from cryptography import x509
 
-signatureListFiles = 'app_files/signatures_list'
-certificate_files_list = 'app_files/certificate_list'
-plaintext_file = 'Plain_text_J&Y.txt'
+#signatures_files_list = sys.argv[1]
+signatureListFiles = 'app_files/signatures_list'  # Hardcoded for testing
+#certificate_files_list = sys.argv[2]
+certificate_files_list = 'app_files/certificate_list'  # Hardcoded for testing
+#plaintext_file = sys.argv[3]
+plaintext_file = 'Plain_text_J&Y.txt'  # Hardcoded for testing
 
 #Read in signatures and certificates
 signatureList = []
