@@ -3,7 +3,7 @@ from pgpy import PGPKey, PGPMessage
 
 plaintext = sys.argv[1]
 privatekey_file = sys.argv[2]
-priv_passphrase = sys.argv[3]
+passphrase = sys.argv[3]
 
 # get the key from the keyring
 with open(privatekey_file, "r") as privatekeyfile:
@@ -17,7 +17,7 @@ with open(plaintext, "r") as plainfile:
 message = PGPMessage.new(plain_text)
 print(message)
 
-#with privkey.unlock(priv_passphrase):
+#with privkey.unlock(passphrase):
 signature = privkey.sign(message)
 print(signature)
 # write the signature

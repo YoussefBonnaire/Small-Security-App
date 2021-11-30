@@ -15,7 +15,7 @@ except:
     plaintext_file = 'Plain_text_J&Y.txt'  # Hardcoded for testing
 
 
-#Read in signatures and certificates
+# Read in signatures and certificates
 signatureList = []
 with open(signatureListFiles,"r") as sigFiles:
     files = sigFiles.read().splitlines()
@@ -59,8 +59,8 @@ for i in range(len(signatureList)):
         else:
             print('Not PGP Verified')
     else:
-        # verify x509 sig and certificate match if certificates[i].fingerprint(certificates[
-        # i].signature_hash_algorithm) == signatureList[i].signer_fingerprint:
+        # verify x509 sig and certificate match
+        # if certificates[i].fingerprint(certificates[i].signature_hash_algorithm) == signatureList[i].signer_fingerprint:
         try:
             if verify(certificates[i], signatureList[i], plain_text, "sha256") is None:
                 print('X509 verified')
