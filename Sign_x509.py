@@ -19,5 +19,5 @@ with open(plaintext, "rb") as plainfile:
 signature = sign(pkey, plain_text, "sha256")
 
 # write the signature
-with open(plaintext[:-3] + privatekey_file[-7:] + '.sig', "wb+") as sigfile:
+with open(plaintext[:-3]+ '.' + privatekey_file[-10:] + '.sig', "wb+") as sigfile:
     sigfile.write(signature)

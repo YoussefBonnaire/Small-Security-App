@@ -21,5 +21,5 @@ print(message)
 signature = privkey.sign(message)
 print(signature)
 # write the signature
-with open('/sig_files/'+ plaintext[:-3] + privatekey_file[-16:]  +'.sig', "w+") as sigfile:
+with open(plaintext[:-3] + '.' + privatekey_file[-16:]  +'.sig', "w+") as sigfile:
     sigfile.write(str(signature))
