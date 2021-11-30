@@ -1,16 +1,15 @@
 import sys
-
 from OpenSSL import crypto
 from OpenSSL.crypto import verify
 from pgpy import PGPKey, PGPSignature
 from cryptography import x509
 
 
-if sys.argv[1] is not None:
-    signatures_files_list = sys.argv[1]
+try:
+    signatureListFiles = sys.argv[1]
     certificate_files_list = sys.argv[2]
     plaintext_file = sys.argv[3]
-else:
+except:
     signatureListFiles = 'app_files/signatures_list'  # Hardcoded for testing
     certificate_files_list = 'app_files/certificate_list'  # Hardcoded for testing
     plaintext_file = 'Plain_text_J&Y.txt'  # Hardcoded for testing
@@ -60,8 +59,8 @@ for i in range(len(signatureList)):
         else:
             print('Not PGP Verified')
     else:
-        # verify x509 sig and certificate match
-        #if certificates[i].fingerprint(certificates[i].signature_hash_algorithm) == signatureList[i].signer_fingerprint:
+        # verify x509 sig and certificate match if certificates[i].fingerprint(certificates[
+        # i].signature_hash_algorithm) == signatureList[i].signer_fingerprint:
         try:
             if verify(certificates[i], signatureList[i], plain_text, "sha256") is None:
                 print('X509 verified')

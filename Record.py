@@ -1,14 +1,15 @@
 # Takes in list of public key sig files and a document and checks whether document is signed by signatories
-# import sys
+
+import sys
 import pgpy
 from pgpy import PGPKey, PGPSignature
 from OpenSSL.crypto import FILETYPE_PEM, verify, X509, load_certificate
 
-if sys.argv[1] is not None:
+try:
     signatures_files_list = sys.argv[1]
     certificate_files_list = sys.argv[2]
     plaintext_file = sys.argv[3]
-else:
+except:
     signatures_files_list = 'app_files/signatures_list'  # Hardcoded for testing
     certificate_files_list = 'app_files/certificate_list'  # Hardcoded for testing
     plaintext_file = 'Plain_text_J&Y.txt'  # Hardcoded for testing

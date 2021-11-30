@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="67c22a5a-539e-4c0f-8dcb-afecd94e3afb" name="Changes" comment="Commenting" />
+    <list default="true" id="67c22a5a-539e-4c0f-8dcb-afecd94e3afb" name="Changes" comment="argument change">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Record.py" beforeDir="false" afterPath="$PROJECT_DIR$/Record.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Verify.py" beforeDir="false" afterPath="$PROJECT_DIR$/Verify.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_root-.csr" beforeDir="false" afterPath="$PROJECT_DIR$/x509_cert/test_root-.csr" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,12 +42,12 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\youss\OneDrive\Documents\Education\CNS\CW2\Gits\x509_cert" />
       <recent name="C:\Users\youss\OneDrive\Documents\Education\CNS\CW2\Gits\sig_files" />
       <recent name="C:\Users\youss\OneDrive\Documents\Education\CNS\CW2\Gits\x509_keys" />
-      <recent name="C:\Users\youss\OneDrive\Documents\Education\CNS\CW2\Gits\x509_cert" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Verify">
+  <component name="RunManager" selected="Python.Record">
     <configuration name="Record" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Gits" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -300,7 +305,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638268673157</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="argument change">
+      <created>1638269679923</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1638269679923</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -333,7 +345,8 @@
     <MESSAGE value="Completion on pgp keys but not x509 keys" />
     <MESSAGE value="temporary x509 fix" />
     <MESSAGE value="Commenting" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commenting" />
+    <MESSAGE value="argument change" />
+    <option name="LAST_COMMIT_MESSAGE" value="argument change" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
