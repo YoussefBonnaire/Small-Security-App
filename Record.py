@@ -1,5 +1,5 @@
 # Takes in list of public key sig files and a document and checks whether document is signed by signatories
-import sys
+# import sys
 import pgpy
 from pgpy import PGPKey, PGPSignature
 from OpenSSL.crypto import FILETYPE_PEM, verify, X509, load_certificate
