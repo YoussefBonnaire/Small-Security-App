@@ -17,9 +17,11 @@ signatureList = []
 with open(signatureListFiles,"r") as sigFiles:
     files = sigFiles.read().splitlines()
     for file in files:
+        # Load pgp signatures
         try:
             signature = PGPSignature.from_file(file)
             signatureList.append(signature)
+        # Load x509 signatures
         except:
             with open(file, 'rb') as f:
                 signature = f.read()
@@ -31,9 +33,11 @@ with open(certificate_files_list, "r") as certificate_files:
     cert_lines = certificate_files.read().splitlines()
     for certificate_file in cert_lines:
         try:
+            # Load pgp certificates (public keys)
             certificate, _ = PGPKey.from_file(certificate_file)
             certificates.append(certificate)
         except:
+            # Load x509 certificates
             with open(certificate_file, "rb") as certificate:
                 cert = certificate.read()
                 crtObj = x509.load_pem_x509_certificate(cert)
@@ -45,12 +49,14 @@ with open(plaintext_file, "rb") as plainfile:
 # verify
 for i in range(len(signatureList)):
     if isinstance(certificates[i], PGPKey):
+        # verify pgp sig and certificate match
         verifications = certificates[i].fingerprint.keyid == signatureList[i].signer
         if(verifications):
             print('PGP verified')
         else:
             print('Not PGP Verified')
     else:
+        # verify x509 sig and certificate match
         #if certificates[i].fingerprint(certificates[i].signature_hash_algorithm) == signatureList[i].signer_fingerprint:
         try:
             if verify(certificates[i], signatureList[i], plain_text, "sha256") is None:
